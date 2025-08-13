@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient 3s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        .blue-white-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 25%, #b3e5fc 50%, #4fc3f7 75%, #0288d1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient 3s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+    <!-- Hero section -->
+    <div class="w-full h-screen bg-gradient-to-b from-gray-400 bg-black flex justify-center items-center">
+        <h1 id="element" class="text-6xl font-bold gradient-text"></h1>
+    </div>
+
+    <!-- Content section -->
+    <section class="bg-gradient-to-t from-gray-400 to-black p-20">
+        <div class="w-[600px] h-[340px] rounded-lg bg-[#181123] pt-10 px-10">
+            <h1 id="h1" class="text-4xl font-bold blue-white-gradient"></h1>
+            <p class="text-xl font-medium text-white mt-10">
+                Interaction design isn’t merely a matter of aesthetic choice; 
+                rather, it is based on an understanding of users and cognitive principles.
+            </p>
+        </div>
+    </section>
+
+    <!-- Libraries -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>
